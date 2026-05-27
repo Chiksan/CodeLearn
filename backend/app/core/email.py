@@ -42,5 +42,7 @@ def send_verification_email(to_email: str, username: str, token: str):
             server.starttls()
             server.login(settings.SMTP_USER, settings.SMTP_PASSWORD)
             server.sendmail(settings.SMTP_USER, to_email, msg.as_string())
+        return True
     except Exception as e:
         print(f"[EMAIL ERROR] {e}")
+        return False

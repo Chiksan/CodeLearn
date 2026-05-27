@@ -20,12 +20,17 @@ export default function RegisterPage() {
     setLoading(true)
     setError('')
     try {
-      await api.post('/api/auth/register', {
+      const res = await api.post('/api/auth/register', {
         email: form.email,
         username: form.username,
         password: form.password,
       })
-      setStep('verify')
+      if (res.data?.auto_verified) {
+        setVerified(true)
+        setTimeout(() => navigate('/login'), 2000)
+      } else {
+        setStep('verify')
+      }
     } catch (err) {
       setError(err.response?.data?.detail || 'Ошибка при регистрации')
     } finally {

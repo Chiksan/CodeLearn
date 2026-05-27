@@ -44,7 +44,13 @@ async def register(data: UserRegister, db: AsyncSession = Depends(get_db)):
     await db.flush()
     await db.refresh(user)
 
-    send_verification_email(data.email, data.username, code)
+    email_sent = send_verification_email(data.email, data.username, code)
+
+    if not email_sent:
+        user.is_verified = True
+        user.verify_token = None
+        await db.commit()
+        return {"message": "Аккаунт создан! Можешь войти.", "auto_verified": True}
 
     return {"message": "Код подтверждения отправлен на вашу почту"}
 
