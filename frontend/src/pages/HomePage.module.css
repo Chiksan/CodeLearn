@@ -1,0 +1,268 @@
+.page { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 72px 0 64px;
+}
+
+.heroText { flex: 1; }
+
+.heroBadge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #EEEDFE;
+  color: #534AB7;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.heroText h1 {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+
+.accent {
+  background: linear-gradient(135deg, #534AB7, #8B7FE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroText p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btnPrimary {
+  padding: 13px 28px;
+  background: #534AB7;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+.btnPrimary:hover { background: #4339a0; transform: translateY(-1px); }
+
+.btnOutline {
+  padding: 13px 28px;
+  border: 1.5px solid #534AB7;
+  color: #534AB7;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.btnOutline:hover { background: #EEEDFE; }
+
+/* ─── Code preview card ─────────────────────────────────── */
+.codeCard {
+  flex: 0 0 380px;
+  background: #1e1e2e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(83,74,183,0.18), 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.codeBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: #2a2a3e;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+
+.codeFilename {
+  font-size: 12px;
+  color: #888;
+  font-family: monospace;
+  margin-left: 8px;
+}
+
+.code {
+  padding: 20px 20px 16px;
+  font-size: 13.5px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  color: #cdd6f4;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.codeOutput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #151520;
+  border-top: 1px solid #2a2a3e;
+  font-family: monospace;
+  font-size: 13px;
+  color: #a6e3a1;
+}
+
+.outputLabel {
+  font-size: 10px;
+  padding: 2px 8px;
+  background: #28c84022;
+  color: #a6e3a1;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Stats ─────────────────────────────────────────────── */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  margin-bottom: 64px;
+  overflow: hidden;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 28px 24px;
+  border-right: 1px solid #eee;
+}
+.stat:last-child { border-right: none; }
+
+.stat strong { font-size: 32px; font-weight: 700; color: #534AB7; }
+.stat span { font-size: 13px; color: #888; }
+
+/* ─── Sections ──────────────────────────────────────────── */
+.section { margin-bottom: 64px; }
+
+.sectionTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* ─── Tracks ─────────────────────────────────────────────── */
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.trackCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.trackCard:hover { box-shadow: 0 8px 24px rgba(83,74,183,0.1); transform: translateY(-2px); }
+.trackCardLink { text-decoration: none; color: inherit; display: block; }
+.trackCardLink:hover { box-shadow: 0 8px 24px rgba(83,74,183,0.18); transform: translateY(-3px); }
+
+.trackTop { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+
+.trackIcon { font-size: 32px; }
+
+.trackBadge {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: #EEEDFE;
+  color: #534AB7;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.trackName { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+
+.trackDesc { font-size: 13px; color: #777; line-height: 1.5; margin-bottom: 16px; }
+
+.trackBar { height: 4px; border-radius: 99px; overflow: hidden; }
+
+.trackBarFill { width: 60%; height: 100%; border-radius: 99px; }
+
+/* ─── Steps ──────────────────────────────────────────────── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+}
+
+.stepNum {
+  font-size: 36px;
+  font-weight: 800;
+  color: #EEEDFE;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.stepTitle { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+
+.stepDesc { font-size: 13px; color: #777; line-height: 1.5; }
+
+/* ─── CTA ────────────────────────────────────────────────── */
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #534AB7, #7B72E0);
+  border-radius: 20px;
+  padding: 56px 32px;
+  color: #fff;
+}
+
+.cta h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+
+.cta p { font-size: 15px; opacity: 0.85; margin-bottom: 28px; }
+
+.ctaBtn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: #fff;
+  color: #534AB7;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ctaBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; padding: 48px 0 40px; }
+  .codeCard { flex: none; width: 100%; }
+  .heroText h1 { font-size: 32px; }
+  .stats { flex-wrap: wrap; }
+  .stat { flex: 1 0 40%; border-right: none; border-bottom: 1px solid #eee; }
+  .stat:last-child { border-bottom: none; }
+}

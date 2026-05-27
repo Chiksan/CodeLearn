@@ -1,0 +1,190 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.loading, .notFound {
+  text-align: center;
+  padding: 80px 20px;
+  color: #888;
+}
+.notFound a { color: #534AB7; }
+
+/* ─── Hero ───────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 48px;
+}
+
+.heroIcon {
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.heroLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.heroTitle {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.heroDesc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ─── Path ───────────────────────────────────────────── */
+.pathTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 28px;
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.connector {
+  position: absolute;
+  left: 19px;
+  top: 56px;
+  bottom: -32px;
+  width: 2px;
+  z-index: 0;
+}
+
+.connectorLine {
+  width: 2px;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.stepNum {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+/* ─── Card ───────────────────────────────────────────── */
+.card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.07); }
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.level {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.lessons {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.87; }
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+  font-size: 15px;
+}
+
+/* ─── Back link ──────────────────────────────────────── */
+.back { margin-top: 12px; }
+.backLink {
+  font-size: 13px;
+  color: #534AB7;
+  text-decoration: none;
+}
+.backLink:hover { text-decoration: underline; }
