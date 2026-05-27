@@ -34,19 +34,11 @@ services:
       - key: REDIS_URL
         value: ""
 
-  - type: web
+  - type: static
     name: codelearn-frontend
-    plan: free
-    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          name: codelearn-backend
-          type: web
-          property: host
     routes:
       - type: rewrite
         source: /*
